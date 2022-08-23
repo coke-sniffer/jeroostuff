@@ -1,0 +1,51 @@
+@Java
+//(c) A+ Computer Science  
+
+method go()
+{
+  while(!isWater(AHEAD)) {
+    hop();
+    if(isFlower(HERE)) {
+      pick();
+    }
+  }
+}
+
+method  moveDownARow()
+{
+  while(hasFlower()) {
+  while(!isWater(AHEAD)) {
+  go();
+  }
+  turn(RIGHT);
+  hop();
+  if(isFlower(HERE)) {
+    pick();
+    }
+  turn(RIGHT);
+  while(!isWater(AHEAD)) {
+  go();
+  }
+  if(isWater(LEFT)) {
+    while(hasFlower()) {
+      turn(RIGHT);
+      // how to exit program 
+    }
+    }
+  turn(LEFT);
+  hop();
+  if(isFlower(HERE)) {
+    pick();
+    }
+  turn(LEFT);
+    }
+}
+@@
+//(c) A+ Computer Science
+
+method main()
+{
+  Jeroo pinball = new Jeroo(0,0,1);
+  pinball.moveDownARow();
+  
+}

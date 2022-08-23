@@ -1,0 +1,39 @@
+@Java
+//(c) A+ Computer Science  
+
+method makeAFlowerBox()
+{   
+ hop(7);
+ turn(RIGHT);
+ hop(4);
+ turn(LEFT);
+ plantOneSide();
+}
+
+method plantOneSide()
+{ 
+  while(!isFlower(AHEAD)) {
+  while(isWater(RIGHT)){
+    plant();
+    hop();
+  }
+    turn(RIGHT);
+    hop();
+  }
+  turn(RIGHT);
+  turn(RIGHT);
+  hop();
+  turn(LEFT);
+  hop();
+  turn(LEFT);
+  turn(LEFT);
+  //bad
+}
+@@
+//(c) A+ Computer Science
+
+method main()
+{
+  Jeroo bob = new Jeroo(0,0,100);
+  bob.makeAFlowerBox();
+}
