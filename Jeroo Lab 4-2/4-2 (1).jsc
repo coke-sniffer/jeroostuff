@@ -1,0 +1,78 @@
+@Java
+method checkTop() {
+  if(isFlower(LEFT)){
+    turn(LEFT);
+    hop();
+    pick();
+   	turn(RIGHT);
+    turn(RIGHT);
+    hop();
+    turn(LEFT);
+  } else if(isNet(LEFT)) {
+    turn(LEFT);
+    toss();
+    hop();
+    plant();
+  	turn(RIGHT);
+    turn(RIGHT);
+    hop();
+    turn(LEFT);
+    
+  }
+}
+
+method checkBottom() {
+  if(isFlower(RIGHT)){
+    turn(RIGHT);
+    hop();
+    pick();
+   	turn(LEFT);
+    turn(LEFT);
+    hop();
+    turn(RIGHT);
+  } else if(isNet(RIGHT)) {
+    turn(RIGHT);
+    toss();
+    hop();
+    plant();
+    turn(RIGHT);
+    turn(RIGHT);
+    hop();
+    turn(RIGHT);
+  }
+}
+
+method water(){
+  if(isWater(LEFT)) {
+    turn(RIGHT);
+    hop();
+    plant();
+    turn(LEFT);
+    turn(LEFT);
+    hop();
+    turn(RIGHT);
+  } else if(isWater(RIGHT)) {
+    turn(LEFT);
+    hop();
+    plant();
+    turn(RIGHT);
+    turn(RIGHT);
+    hop();
+    turn(LEFT);
+  }
+}
+@@
+//--- ALWAYS USE SAVE AS ---
+method main()
+{
+  Jeroo bobby = new Jeroo(1,0,2757);  
+  while(bobby.isClear(AHEAD)) {
+    bobby.checkTop();
+    bobby.checkBottom();
+    bobby.water();
+    bobby.hop();
+  }
+
+
+
+} //===== end of method main() =====

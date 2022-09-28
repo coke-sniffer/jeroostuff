@@ -1,0 +1,9 @@
+@Java
+//method go(){while(!isWater(AHEAD)) {hop();if(isFlower(HERE)) {pick();}}}
+//method moveDownARow(){go();if(!isWater(AHEAD)) {go();}turn(RIGHT);hop();if(isFlower(HERE)) {pick();}turn(RIGHT);while(!isWater(AHEAD) && !isWater(LEFT)) {while(!isWater(AHEAD)) {go();}  turn(LEFT);hop();if(isFlower(HERE)) {pick();}turn(LEFT);if(!isWater(AHEAD)) {go();}turn(RIGHT);hop();if(isFlower(HERE)) {pick();}turn(RIGHT);}go();}
+
+method go(){while(!isWater(AHEAD)) {hop();if(isFlower(HERE)) {pick();}}}
+method moveDownARow(){while(!isWater(AHEAD)) {hop();if(isFlower(HERE)) {pick();}}if(!isWater(AHEAD)) {while(!isWater(AHEAD)) {hop();if(isFlower(HERE)) {pick();}}}turn(RIGHT);hop();if(isFlower(HERE)) {pick();}turn(RIGHT);while(!isWater(AHEAD) && !isWater(LEFT)) {while(!isWater(AHEAD)) {while(!isWater(AHEAD)) {hop();if(isFlower(HERE)) {pick();}}}  turn(LEFT);hop();if(isFlower(HERE)) {pick();}turn(LEFT);if(!isWater(AHEAD)) {while(!isWater(AHEAD)) {hop();if(isFlower(HERE)) {pick();}}}turn(RIGHT);hop();if(isFlower(HERE)) {pick();}turn(RIGHT);}while(!isWater(AHEAD)) {hop();if(isFlower(HERE)) {pick();}}}
+@@
+//method main(){Jeroo pinball = new Jeroo(0,0,1);pinball.moveDownARow();}
+method main(){Jeroo a = new Jeroo(0,0,1); while(!a.isWater(AHEAD)) {a.hop();if(a.isFlower(HERE)) {a.pick();}}if(!a.isWater(AHEAD)) {while(!a.isWater(AHEAD)) {a.hop();if(a.isFlower(HERE)) {a.pick();}}}a.turn(RIGHT);a.hop();if(a.isFlower(HERE)) {a.pick();}a.turn(RIGHT);while(!a.isWater(AHEAD) && !a.isWater(LEFT)) {while(!a.isWater(AHEAD)) {while(!a.isWater(AHEAD)) {a.hop();if(a.isFlower(HERE)) {a.pick();}}}a.turn(LEFT);a.hop();if(a.isFlower(HERE)) {a.pick();}a.turn(LEFT);if(!a.isWater(AHEAD)) {while(!a.isWater(AHEAD)) {a.hop();if(a.isFlower(HERE)) {a.pick();}}}a.turn(RIGHT);a.hop();if(a.isFlower(HERE)) {a.pick();}a.turn(RIGHT);}while(!a.isWater(AHEAD)) {a.hop();if(a.isFlower(HERE)) {a.pick();}}}
